@@ -4,6 +4,10 @@ body {
     padding: 0;
     background-color: #121212;
     color: #ffffff;
+    display: flex; /* Body'yi flex konteynır olarak ayarladık */
+    justify-content: center; /* İçerikleri yatayda merkezlemek için */
+    align-items: center; /* İçerikleri dikeyde merkezlemek için */
+    min-height: 100vh; /* Ekran yüksekliğinin tamamını kaplaması için */
 }
 
 .navbar {
@@ -38,7 +42,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 100%;
 }
 
 .logos {
@@ -59,12 +63,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    margin-top: 20px; /* Terminal ile logolar arasında biraz boşluk bırakmak için margin-top ekledik */
 }
 
 #aos-terminal {
-    width: 60%;
-    height: 100%;
+    width: 80%; /* Terminalin genişliğini artırdık */
+    max-width: 8000px; /* Maksimum genişlik belirledik */
+    min-height: 4000px; /* Minimum yükseklik belirledik */
     background: #000000;
     color: #00ff00;
     padding: 20px;
@@ -82,3 +87,4 @@ input {
     background-color: #1f1f1f;
     color: #ffffff;
 }
+
