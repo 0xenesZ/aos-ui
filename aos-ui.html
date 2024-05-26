@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Terminal UI</title>
+    <link rel="stylesheet" href="aos-ui.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="https://github.com/0xenesZ" target="_blank">GitHub</a></li>
+            <li><a href="#">Discord Chat</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="logos">
+            <div class="logo">
+                <img id="arconnectBtn" src="images/arconnect_logo.png" alt="ArConnect" width="100" height="100">
+            </div>
+            <div class="logo">
+                <img id="twitterBtn" src="images/twitter_logo.png" alt="Twitter" width="100" height="100">
+            </div>
+            <div class="logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="terminal-container">
+        <div id="aos-terminal">
+            <pre id="output"></pre>
+            <input type="text" id="command" placeholder="Enter command">
+        </div>
+    </div>
+
+    <!-- IFRAME for Chat -->
+    <iframe src="https://sh_ao.g8way.io/" frameborder="0" scrolling="no"></iframe>
+
+    <script src="script.js"></script>
+</body>
+</html>
