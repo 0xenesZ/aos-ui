@@ -1,55 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aoS-UI</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        #aos-terminal {
-            width: 60%;
-            height: 60%;
-            background: #000;
-            color: #0f0;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            overflow-y: auto;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-    <div id="aos-terminal">
-        <pre id="output"></pre>
-        <input type="text" id="command" placeholder="Enter command">
-    </div>
-    <script>
-        const commandInput = document.getElementById('command');
-        const output = document.getElementById('output');
-        
-        commandInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                const command = commandInput.value;
-                output.textContent += `\n> ${command}`;
-                // Buraya aoS komutunu işleyip sonucu gösterecek kod ekleyin
-                commandInput.value = '';
-            }
-        });
-    </script>
-</body>
-</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: #1f1f1f;
+    overflow: hidden;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-list li {
+    float: left;
+}
+
+.navbar-list li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-list li a:hover {
+    background-color: #575757;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.logos {
+    display: flex;
+    gap: 20px;
+}
+
+.logo img {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.terminal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+#aos-terminal {
+    width: 60%;
+    height: 100%;
+    background: #000000;
+    color: #00ff00;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
