@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aoS-UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #aos-terminal {
+            width: 60%;
+            height: 60%;
+            background: #000;
+            color: #0f0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow-y: auto;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="aos-terminal">
+        <pre id="output"></pre>
+        <input type="text" id="command" placeholder="Enter command">
+    </div>
+    <script>
+        const commandInput = document.getElementById('command');
+        const output = document.getElementById('output');
+        
+        commandInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const command = commandInput.value;
+                output.textContent += `\n> ${command}`;
+                // Buraya aoS komutunu işleyip sonucu gösterecek kod ekleyin
+                commandInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
