@@ -9,6 +9,9 @@ body {
     align-items: center; 
     min-height: 100vh; 
 }
+header {
+    text-align: center;
+}
 
 .navbar {
     background-color: #1f1f1f;
@@ -38,26 +41,6 @@ body {
     background-color: #575757;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.logos {
-    display: flex;
-    gap: 20px;
-}
-
-.logo img {
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.logo img:hover {
-    transform: scale(1.1);
-}
 
 .terminal-container {
     display: flex;
